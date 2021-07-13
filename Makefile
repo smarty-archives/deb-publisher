@@ -2,7 +2,7 @@
 
 NAME  := deb-publisher
 REPO  ?= $(or ${DOCKER_SERVER},smartystreets)
-IMAGE := $(REPO)/$(NAME):$(or ${VERSION},local)
+IMAGE := $(REPO)/$(NAME):$(or ${VERSION},current)
 
 image:
 	docker build . --no-cache --rm -t "$(IMAGE)"
